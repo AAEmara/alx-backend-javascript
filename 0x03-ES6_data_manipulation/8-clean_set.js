@@ -5,5 +5,8 @@ export default function cleanSet(set, startString) {
       stringOutput += `${value.slice(startString.length, value.length)}-`;
     }
   });
-  return (stringOutput.slice(0, stringOutput.length - 1));
+  if (stringOutput.length > 1) {
+    return (stringOutput.slice(0, stringOutput.length - 1));
+  }
+  return ('');
 }
