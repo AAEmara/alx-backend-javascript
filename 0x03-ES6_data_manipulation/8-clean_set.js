@@ -1,5 +1,10 @@
 export default function cleanSet(set, startString) {
   const stringOutput = [];
+  if (!(set instanceof Set)) {
+    throw new Error('Set must be a set');
+  } else if (typeof startString !== 'string') {
+    throw new Error('startString must be a string');
+  }
 
   set.forEach((value) => {
     // Checking if at least the length of the value equals the input string.
