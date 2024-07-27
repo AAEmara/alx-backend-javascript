@@ -41,7 +41,7 @@ async function countStudents(path) {
 ${csvObjects[key][0]}. \
 List: ${names}`;
       console.log(output);
-      result += output;
+      result += `\n${output}`;
     }
   }
   return (result);
