@@ -37,8 +37,6 @@ ${csvObjects[key][0]}. \
 List: ${names}`);
       }
     }
-
-    return (fileContents);
   } catch (error) {
     throw new Error('Cannot load the database');
   }
