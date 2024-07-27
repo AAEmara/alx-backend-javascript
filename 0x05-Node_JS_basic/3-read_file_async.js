@@ -24,7 +24,7 @@ async function countStudents(path) {
     }
     let count = 0;
     for (const line of lines) {
-      if (line.trim()) {
+      if (line) {
         count += 1;
       }
     }
