@@ -32,15 +32,19 @@ async function countStudents(path) {
       count += 1;
     }
   }
-  console.log(`Number of students: ${count}`);
+  let result = `Number of students: ${count}`;
+  console.log(result);
   for (const key in csvObjects) {
     if (key in csvObjects) {
       const names = csvObjects[key][1].join(', ');
-      console.log(`Number of students in ${key}: \
+      const output = `Number of students in ${key}: \
 ${csvObjects[key][0]}. \
-List: ${names}`);
+List: ${names}`;
+      console.log(output);
+      result += output;
     }
   }
+  return (result);
 }
 
 module.exports = countStudents;
