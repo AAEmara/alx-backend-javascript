@@ -11,4 +11,4 @@ const app = createServer((req, res) => {
 
 app.listen(port, hostname);
 
-exports.app = app;
+module.exports = app;
