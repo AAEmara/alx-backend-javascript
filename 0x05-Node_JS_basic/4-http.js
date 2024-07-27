@@ -9,6 +9,6 @@ const app = createServer((req, res) => {
   res.end('Hello Holberton School!');
 });
 
-module.exports = app;
+exports.app = app;
 
 app.listen(port, hostname);
