@@ -1,6 +1,6 @@
-interface Teacher {
-  firstName: string;
-  lastName: string;
+export interface Teacher {
+  readonly firstName: string;
+  readonly lastName: string;
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   location: string;
@@ -21,11 +21,11 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName[0]}. ${lastName}`;
 };
 
-interface StudentClassConstructor {
+export interface StudentClassConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-interface StudentClassInterface {
+export interface StudentClassInterface {
   firstName: string;
   lastName: string;
   workOnHomework(): string;
